@@ -43,11 +43,8 @@
           <a class="nav-link active" aria-current="page" href="/webapp1/home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/webapp1/firstpost">Post1</a>
+          <a class="nav-link" href="/webapp1/posts?page=1" tabindex="-1" aria-disabled="true">Posts</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/webapp1/secondpost">Post2</a>
-          </li>
           <li class="nav-item">
             <a class="nav-link" href="/webapp1/createpost">Create Post</a>
           </li>
@@ -62,6 +59,8 @@
     </div>
   </div>
 </nav>
+<div>
 {% block content %}
 {% endblock %}
+</div>
 </body>

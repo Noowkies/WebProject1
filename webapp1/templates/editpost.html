@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<html lang="en">
+  <head>
+    <title>Editpost</title>
+  </head>
+  <body>
+    <main>
+        <h1>Edit your post</h1> 
+        <form action="" method="POST">
+            {%csrf_token%}
+           {{post_form}}
+            <input type="submit" value="Submit">
+          </form>  
+    </main>
+  </body>
+</html>

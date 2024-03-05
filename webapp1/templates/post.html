@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+{% block content %}
+
+<div class="card" style="width: 18rem;">
+ 
+  <div class="card-body">
+    <h5 class="card-title">{{post.title}}</h5> 
+    <p class="card-text">{{post.content}}</p> 
+    
+    
+    <form action="/webapp1/post/{{id}}/edit" method="GET">
+      <button type="submit" name="id" value="{{id}}" class="btn btn-outline-info">Edit</button>
+    </form>
+    <form action="/webapp1/deletepost" method="GET">
+      <button type="submit" name="id" value="{{id}}" class="btn btn-outline-danger">Delete</button>
+    </form>
+    
+  </div>
+</div>
+
+{% endblock content %}

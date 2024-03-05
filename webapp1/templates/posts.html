@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+{% block content %}
+{% for post in posts %}
+<div class="card" style="width: 18rem;">
+<a href="/webapp1/post?id={{post.id}}">
+    <div class="card-body">
+    <h5 class="card-title">{{post.title}}</h5>
+    <p class="card-text">{{post.subtitle}}</p>
+  </div>
+</div></a>
+{% endfor %}
+{% if totalpage >= next_page %}
+<p><a class="link-opacity-10-hover" href="/webapp1/posts?page={{next_page}}">Next page</a></p>
+{% endif %} 
+{% if prev_page > 0 %}
+<p><a class="link-opacity-10-hover" href="/webapp1/posts?page={{prev_page}}">Previous page</a></p>
+{% endif %}
+{% endblock content %}
